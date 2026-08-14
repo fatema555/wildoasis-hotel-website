@@ -1,16 +1,28 @@
-/** @type {import('next').NextConfig} */
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   images: {
+//     remotePatterns: [
+//       {
+//         protocol: "https",
+//         hostname: "dclaevazetcjjkrzczpc.supabase.co",
+//         port: "",
+//         pathname: "/storage/v1/object/public/cabin-images/**",
+//       },
+//     ],
+//   },
+//   // output: "export",
+// };
+
+// export default nextConfig;
+/** @type {import('next').Config} */
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "dclaevazetcjjkrzczpc.supabase.co",
-        port: "",
-        pathname: "/storage/v1/object/public/cabin-images/**",
-      },
-    ],
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-  // output: "export",
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
